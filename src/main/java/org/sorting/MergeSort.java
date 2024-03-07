@@ -1,7 +1,8 @@
 package org.sorting;
 
 //O(nlogn) it's not adaptive(we cant stop early), it's stable, requires additional space
-public class MergeSort {  //uses a divide and conquer to create small sub problems of the same criteria and sorts the small problem
+public class MergeSort {  //uses a divide and conquer to create small sub problems of the same criteria and sorts the small problem.
+                            // Uses an artificial index and length of list to partition list
 
     public static void main(String[] args) {
         int[] arr = {70, 50, 30, 10, 20, 40, 60};
@@ -49,7 +50,7 @@ public class MergeSort {  //uses a divide and conquer to create small sub proble
         while (i < left.length && j < right.length) {
             if (left[i] < right[j]) {
                 arr[k] = left[i];
-                i++;
+                i++;  // move the pointer of the arr element that gets inserted
             } else {
                 arr[k] = right[j];
                 j++;
